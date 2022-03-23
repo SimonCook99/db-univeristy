@@ -15,7 +15,7 @@ JOIN `exam_student` ON `exams`.`id` = `exam_student`.`exam_id`
 GROUP BY `exam_student`.`vote`
 
 4)
-SELECT COUNT(*)
+SELECT COUNT(*), `departments`.`name`
 FROM `departments`
 JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id`
 GROUP BY `degrees`.`department_id`
