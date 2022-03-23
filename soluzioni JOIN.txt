@@ -19,7 +19,11 @@ WHERE `teachers`.`id`= 44;
 
 
 4)
-
+SELECT `students`.`name`, `students`.`surname`, `degrees`.`name` AS "laurea", `departments`.`name` AS "dipartimento"
+FROM `students`
+JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
+JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
+ORDER BY `students`.`name`, `students`.`surname` ASC
 
 
 5)
